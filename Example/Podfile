@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MAGMessageService_Example' do
+  pod 'MAGMessageService', :path => '../'
+
+  target 'MAGMessageService_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
