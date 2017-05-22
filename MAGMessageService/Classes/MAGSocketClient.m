@@ -91,9 +91,16 @@ CFAbsoluteTime serverActivity;
     NSLog(@"<<< PING");
 }
 
-- (void)setupHeartBeat {
-    NSInteger pingTTL = 10;
-    NSInteger pongTTL = 10;
+- (void)setupHeartBeat:(NSString *)serverValues {
+    NSInteger sx, sy;
+    
+    NSScanner * scanner = [NSScanner scannerWithString:serverValues];
+    scanner.charactersToBeSkipped = [NSCharacterSet characterSetWithCharactersInString:@", "];
+    [scanner scanInteger:&sx];
+    [scanner scanInteger:&sy];
+
+    NSInteger pingTTL = ceil(sx / 1000);
+    NSInteger pongTTL = ceil(sy / 1000);
     dispatch_async(dispatch_get_main_queue(), ^{
         if (pingTTL > 0) {
             self.pinger = [NSTimer scheduledTimerWithTimeInterval: pingTTL
@@ -127,7 +134,8 @@ CFAbsoluteTime serverActivity;
 - (void)receivedFrame:(MAGMessageFrame *)frame {
     if ([frame.command isEqualToString:kCommandConnected]) {
         NSLog(@">>> CONNECTED");
-        [self setupHeartBeat];
+        NSString *heartBeat = frame.payload[@"heartBeat"];
+        [self setupHeartBeat:heartBeat];
         [self.delegate didOpenSocketClient:self];
     } else if ([frame.command isEqualToString:kCommandMessage]) {
         NSLog(@">>> MESSAGE");
