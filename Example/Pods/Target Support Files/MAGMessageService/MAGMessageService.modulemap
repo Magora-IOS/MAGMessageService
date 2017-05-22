@@ -1,0 +1,6 @@
+framework module MAGMessageService {
+  umbrella header "MAGMessageService-umbrella.h"
+
+  export *
+  module * { export * }
+}

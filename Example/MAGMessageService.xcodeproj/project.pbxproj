@@ -22,6 +22,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		7D0FF2BF1ED29BA400572133 /* NOTICE in Resources */ = {isa = PBXBuildFile; fileRef = 7D0FF2BE1ED29BA400572133 /* NOTICE */; };
 		85B62B6D24CB1C3B3E83850A /* Pods_MAGMessageService_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6EC9DB19D302CB03A3B6E9 /* Pods_MAGMessageService_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -37,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C77864D02ADFDDB6BE08E88 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0C77864D02ADFDDB6BE08E88 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		53BAA5122BBEEF1F1829B8D6 /* Pods-MAGMessageService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGMessageService_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGMessageService_Tests/Pods-MAGMessageService_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* MAGMessageService_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAGMessageService_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,13 +61,14 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78D1B71403C12C94A6F09A0C /* Pods_MAGMessageService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGMessageService_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0FF2BE1ED29BA400572133 /* NOTICE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = NOTICE; path = ../NOTICE; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D6EC9DB19D302CB03A3B6E9 /* Pods_MAGMessageService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MAGMessageService_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1EA4A3180715B68B66C11E /* Pods-MAGMessageService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGMessageService_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGMessageService_Tests/Pods-MAGMessageService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D1C9B2ACB2020B34F80201E5 /* Pods-MAGMessageService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGMessageService_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MAGMessageService_Example/Pods-MAGMessageService_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D23F2679652B97573A242297 /* Pods-MAGMessageService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MAGMessageService_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MAGMessageService_Example/Pods-MAGMessageService_Example.release.xcconfig"; sourceTree = "<group>"; };
-		EDDDBD5A0B9A687BC256B5DE /* MAGMessageService.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MAGMessageService.podspec; path = ../MAGMessageService.podspec; sourceTree = "<group>"; };
-		FD0FCB1FA8D548346BACDC63 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EDDDBD5A0B9A687BC256B5DE /* MAGMessageService.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = MAGMessageService.podspec; path = ../MAGMessageService.podspec; sourceTree = "<group>"; };
+		FD0FCB1FA8D548346BACDC63 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				7D0FF2BE1ED29BA400572133 /* NOTICE */,
 				EDDDBD5A0B9A687BC256B5DE /* MAGMessageService.podspec */,
 				FD0FCB1FA8D548346BACDC63 /* README.md */,
 				0C77864D02ADFDDB6BE08E88 /* LICENSE */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0FF2BF1ED29BA400572133 /* NOTICE in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
@@ -527,6 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAGMessageService/MAGMessageService-Prefix.pch";
 				INFOPLIST_FILE = "MAGMessageService/MAGMessageService-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,6 +547,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MAGMessageService/MAGMessageService-Prefix.pch";
 				INFOPLIST_FILE = "MAGMessageService/MAGMessageService-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

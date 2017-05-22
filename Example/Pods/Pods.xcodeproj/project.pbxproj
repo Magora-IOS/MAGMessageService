@@ -1,0 +1,955 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		018265B56FAD326A9720B79278D15002 /* MAGMessageService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8614A6B2D48FC6638EEABE5D882CC /* MAGMessageService.m */; };
+		02AE907A5C3A644B2B5D0345B4A4020E /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */; };
+		0C9FEB6D84A17B547C23DD281450A488 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19826533A935A19DF8353302437AF449 /* Pods-MAGMessageService_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8F5401252515626767503FCFCCCBBD /* Pods-MAGMessageService_Tests-dummy.m */; };
+		1CE19C3D1F7349425EE5579C678B1817 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */; };
+		50D683108B5F5CC7764A6890709A9D11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		662A639EC849149EADC032DF176DB5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		6647C7EA61B00C125565DD70686D75D7 /* Pods-MAGMessageService_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC0C2C5A8F4F33E144094FBAB5A0742 /* Pods-MAGMessageService_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		745A3C3482D8552BBB690478EBE47C95 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */; };
+		8B20BF5CB457803A12A6932048FF507C /* Pods-MAGMessageService_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B63750CE4A99B2CA1C820432EAB4910D /* Pods-MAGMessageService_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E93EA9C1FEA1ED0D9422D8AEB1975C2 /* MAGMessageFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 417CAB78EB615A4C3D3924DB89B796E6 /* MAGMessageFrame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7B7F31709FF4985C0E6BE71C915911F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		ADEC233072CA47751CB31D61D583E573 /* Pods-MAGMessageService_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 758642D837BDD98C69199CFB5A04010E /* Pods-MAGMessageService_Example-dummy.m */; };
+		AFFFD6080ED89ED8D9AFFCE8E0E5E896 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */; };
+		B4A9C45EDAD93E8F34FA9E16BAF604D0 /* MAGMessageService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3315452031A1651967573BEA62D91D2F /* MAGMessageService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F6FA2302037A895C88D63491CE81B8 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AC6C17B23C764602C5390F5F8C430AC3 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B88B86969D58925DAF8030439049D609 /* MAGMessageService-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 806742750EC941BE3023AECDAC4D5F9C /* MAGMessageService-dummy.m */; };
+		BBCEF6FE2566A18E4CE9F001D9994994 /* MAGMessageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D029F5310A306F173650E78119BF3AC /* MAGMessageFrame.m */; };
+		C142DD0F3EDAE32069841533F5E91AEF /* MAGSocketClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 53EF95052E936EEFB735325A8BD61179 /* MAGSocketClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C87BB40E004EE93C65BBBFA8CE92D9B0 /* SocketRocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9C4049468910D8583435FB6D33CC7D1 /* SocketRocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA9041FC2064DE6AC4CB819E036B992F /* MAGSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 325D7CDA494AFA0AEB93CCA6526B3689 /* MAGSocketClient.m */; };
+		CF27212CE789095D5D92D09D84AD8825 /* MAGMessageService-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87ED903338324170B1BBDC6D389386F1 /* MAGMessageService-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E73D2C19FA8A683BB6F35BE4216E2202 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */; };
+		FB11640FA7DC16DEF8C463D24CC41A68 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C8ACF8057CF9D838A52FFEEF62CB79B4 /* Reachability.m */; };
+		FD09FB11C8B7B6D34258FE941AE78EBA /* SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B6182DC19238E2E80F1EAF8F347CE363 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4F852D3E4582038E0697F9FC312D6E;
+			remoteInfo = SocketRocket;
+		};
+		BCAD0655C71129E0D009B61EAA7F5A91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4F852D3E4582038E0697F9FC312D6E;
+			remoteInfo = SocketRocket;
+		};
+		D874DFFA98E35C2779CC757BA7C0AF6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48A082419BDAE4F27D29712C7BB8DBBD;
+			remoteInfo = MAGMessageService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		028ABE2CC49CAB4C93AD95D8F0FE2A08 /* MAGMessageService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MAGMessageService.framework; path = MAGMessageService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06C23FD32CCE5ABA8785ED93E263B860 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		0AC0C2C5A8F4F33E144094FBAB5A0742 /* Pods-MAGMessageService_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAGMessageService_Tests-umbrella.h"; sourceTree = "<group>"; };
+		15FB0E09C0C5826395539B29C11D4091 /* Pods-MAGMessageService_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGMessageService_Example.release.xcconfig"; sourceTree = "<group>"; };
+		1605E05AD9F09212D83D811D4889E936 /* Pods-MAGMessageService_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MAGMessageService_Example.modulemap"; sourceTree = "<group>"; };
+		1A0C829A068C943BD37C63985D4645D8 /* Pods-MAGMessageService_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGMessageService_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2C99E54B477C1193E52599897DB1DA76 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325D7CDA494AFA0AEB93CCA6526B3689 /* MAGSocketClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGSocketClient.m; sourceTree = "<group>"; };
+		3315452031A1651967573BEA62D91D2F /* MAGMessageService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGMessageService.h; sourceTree = "<group>"; };
+		37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SocketRocket.h; path = SocketRocket/SocketRocket.h; sourceTree = "<group>"; };
+		417CAB78EB615A4C3D3924DB89B796E6 /* MAGMessageFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGMessageFrame.h; sourceTree = "<group>"; };
+		47F209838B2C56EE11128C73A58CF90C /* MAGMessageService-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGMessageService-prefix.pch"; sourceTree = "<group>"; };
+		4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SocketRocket.modulemap; sourceTree = "<group>"; };
+		4D929BA5D2BE7A37B42CA814D1318357 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA8614A6B2D48FC6638EEABE5D882CC /* MAGMessageService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGMessageService.m; sourceTree = "<group>"; };
+		538737BED43BD8F031C86732CC75CB81 /* SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-prefix.pch"; sourceTree = "<group>"; };
+		53EF95052E936EEFB735325A8BD61179 /* MAGSocketClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MAGSocketClient.h; sourceTree = "<group>"; };
+		5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-umbrella.h"; sourceTree = "<group>"; };
+		604FA89D407FA6395D3D07F98646B7E9 /* SocketRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocketRocket.framework; path = SocketRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61EE6475AC696DD536B2190463914E59 /* Pods-MAGMessageService_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MAGMessageService_Tests.modulemap"; sourceTree = "<group>"; };
+		6F03278055181224AE3CAD9A94CD9122 /* Pods-MAGMessageService_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAGMessageService_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		704A33ED05BA674C1F85E20F131CDFB8 /* Pods-MAGMessageService_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MAGMessageService_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		739EFC4B6B20148B6E367FD9B104399F /* MAGMessageService.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAGMessageService.xcconfig; sourceTree = "<group>"; };
+		758642D837BDD98C69199CFB5A04010E /* Pods-MAGMessageService_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGMessageService_Example-dummy.m"; sourceTree = "<group>"; };
+		7831C24BE66AE2F79B4D2923603D4E71 /* Pods-MAGMessageService_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAGMessageService_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocketRocket-dummy.m"; sourceTree = "<group>"; };
+		7B4A9B8FA85B4A56EF1306C347B1E272 /* Pods_MAGMessageService_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MAGMessageService_Example.framework; path = "Pods-MAGMessageService_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD17BCC79687537CFDDDD1094B6BDE7 /* Pods-MAGMessageService_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGMessageService_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		806742750EC941BE3023AECDAC4D5F9C /* MAGMessageService-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAGMessageService-dummy.m"; sourceTree = "<group>"; };
+		81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		87ED903338324170B1BBDC6D389386F1 /* MAGMessageService-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAGMessageService-umbrella.h"; sourceTree = "<group>"; };
+		88C5BA4A780E01095F01724F4785DA31 /* Pods-MAGMessageService_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGMessageService_Tests-resources.sh"; sourceTree = "<group>"; };
+		8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8D029F5310A306F173650E78119BF3AC /* MAGMessageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MAGMessageFrame.m; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		9A33F57D14BABB8E67F58C0FCF2D7CF8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F5F37ECBB3B6CDC1E27C63DE19BADD4 /* MAGMessageService.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MAGMessageService.modulemap; sourceTree = "<group>"; };
+		9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocketRocket.xcconfig; sourceTree = "<group>"; };
+		9FD2E578F1427EA930D372A28E3445D3 /* Pods-MAGMessageService_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGMessageService_Example-resources.sh"; sourceTree = "<group>"; };
+		A8AA7B604F64C762F207AFA520CE891D /* Pods-MAGMessageService_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGMessageService_Example-frameworks.sh"; sourceTree = "<group>"; };
+		AC6C17B23C764602C5390F5F8C430AC3 /* Reachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		B63750CE4A99B2CA1C820432EAB4910D /* Pods-MAGMessageService_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MAGMessageService_Example-umbrella.h"; sourceTree = "<group>"; };
+		BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		BF7AD99584215223659B6318B09488B7 /* Pods-MAGMessageService_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MAGMessageService_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C8ACF8057CF9D838A52FFEEF62CB79B4 /* Reachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		DB8F5401252515626767503FCFCCCBBD /* Pods-MAGMessageService_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MAGMessageService_Tests-dummy.m"; sourceTree = "<group>"; };
+		E532BABF0B4BF29630FA8C3FCED9B035 /* Pods_MAGMessageService_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MAGMessageService_Tests.framework; path = "Pods-MAGMessageService_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4C486470D8DF7BAC7399892FD0E3BE1 /* Pods-MAGMessageService_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MAGMessageService_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FFA2DA8112ECD90C11D82EF8752B500B /* Pods-MAGMessageService_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MAGMessageService_Tests-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		229461D608651D9A15C5414CD8DAB2C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B7F31709FF4985C0E6BE71C915911F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		290BFA00D0ACC2F0639275095A17A929 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFFFD6080ED89ED8D9AFFCE8E0E5E896 /* Foundation.framework in Frameworks */,
+				745A3C3482D8552BBB690478EBE47C95 /* SocketRocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A60C647035D26F4C57C32756E4C5A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE19C3D1F7349425EE5579C678B1817 /* CFNetwork.framework in Frameworks */,
+				662A639EC849149EADC032DF176DB5E5 /* Foundation.framework in Frameworks */,
+				E73D2C19FA8A683BB6F35BE4216E2202 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6C0374CC737D4CAC9273445D689C97C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D683108B5F5CC7764A6890709A9D11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00C6EBCA0A6E9F5369FBB61911F54C8C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C99E54B477C1193E52599897DB1DA76 /* Info.plist */,
+				9F5F37ECBB3B6CDC1E27C63DE19BADD4 /* MAGMessageService.modulemap */,
+				739EFC4B6B20148B6E367FD9B104399F /* MAGMessageService.xcconfig */,
+				806742750EC941BE3023AECDAC4D5F9C /* MAGMessageService-dummy.m */,
+				47F209838B2C56EE11128C73A58CF90C /* MAGMessageService-prefix.pch */,
+				87ED903338324170B1BBDC6D389386F1 /* MAGMessageService-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MAGMessageService";
+			sourceTree = "<group>";
+		};
+		056022F35F40AFBA67B5EB686460EAD7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33B7D77B3A47060D49835BDF426D38C6 /* MAGMessageService */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FA45DB3EC5BD8343FDFBC53831394EE /* SocketRocket.framework */,
+				888B4F781E1372B03D0269A2918E530A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		147968670E0A1D211ADD31BE39F02952 /* Pods-MAGMessageService_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4D929BA5D2BE7A37B42CA814D1318357 /* Info.plist */,
+				61EE6475AC696DD536B2190463914E59 /* Pods-MAGMessageService_Tests.modulemap */,
+				6F03278055181224AE3CAD9A94CD9122 /* Pods-MAGMessageService_Tests-acknowledgements.markdown */,
+				7831C24BE66AE2F79B4D2923603D4E71 /* Pods-MAGMessageService_Tests-acknowledgements.plist */,
+				DB8F5401252515626767503FCFCCCBBD /* Pods-MAGMessageService_Tests-dummy.m */,
+				FFA2DA8112ECD90C11D82EF8752B500B /* Pods-MAGMessageService_Tests-frameworks.sh */,
+				88C5BA4A780E01095F01724F4785DA31 /* Pods-MAGMessageService_Tests-resources.sh */,
+				0AC0C2C5A8F4F33E144094FBAB5A0742 /* Pods-MAGMessageService_Tests-umbrella.h */,
+				7FD17BCC79687537CFDDDD1094B6BDE7 /* Pods-MAGMessageService_Tests.debug.xcconfig */,
+				1A0C829A068C943BD37C63985D4645D8 /* Pods-MAGMessageService_Tests.release.xcconfig */,
+			);
+			name = "Pods-MAGMessageService_Tests";
+			path = "Target Support Files/Pods-MAGMessageService_Tests";
+			sourceTree = "<group>";
+		};
+		33B7D77B3A47060D49835BDF426D38C6 /* MAGMessageService */ = {
+			isa = PBXGroup;
+			children = (
+				5623067387B7E4A65BB0E32A069A15F7 /* MAGMessageService */,
+				00C6EBCA0A6E9F5369FBB61911F54C8C /* Support Files */,
+			);
+			name = MAGMessageService;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		4FF663BB937700D1580BDAB7F3EF0D97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DC3187DB7279173E5C52E8BE8D2FEB1 /* SocketRocket */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5623067387B7E4A65BB0E32A069A15F7 /* MAGMessageService */ = {
+			isa = PBXGroup;
+			children = (
+				9E038F27526E18E740086A21CE1BCFFF /* Classes */,
+			);
+			name = MAGMessageService;
+			path = MAGMessageService;
+			sourceTree = "<group>";
+		};
+		58568D630B39E76CA642F3332E1A45D5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A33F57D14BABB8E67F58C0FCF2D7CF8 /* Info.plist */,
+				4B25B68109E2B8C5B35F0A73504F1705 /* SocketRocket.modulemap */,
+				9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */,
+				7932176CAC4E66CD1DF6CF8B352798BC /* SocketRocket-dummy.m */,
+				538737BED43BD8F031C86732CC75CB81 /* SocketRocket-prefix.pch */,
+				6006CA1202529404CCB0FA1975B10213 /* SocketRocket-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SocketRocket";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				056022F35F40AFBA67B5EB686460EAD7 /* Development Pods */,
+				0BCEBE9D38D6453FC1223B72B412E5B2 /* Frameworks */,
+				4FF663BB937700D1580BDAB7F3EF0D97 /* Pods */,
+				C1292099B9019A9F3B8D457FD8A62123 /* Products */,
+				B8DFC81C49FEEE6A912512BCD2448A3B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EAB0AEAFA576B85A9E777175A9CC8F9 /* Pods-MAGMessageService_Example */ = {
+			isa = PBXGroup;
+			children = (
+				06C23FD32CCE5ABA8785ED93E263B860 /* Info.plist */,
+				1605E05AD9F09212D83D811D4889E936 /* Pods-MAGMessageService_Example.modulemap */,
+				704A33ED05BA674C1F85E20F131CDFB8 /* Pods-MAGMessageService_Example-acknowledgements.markdown */,
+				BF7AD99584215223659B6318B09488B7 /* Pods-MAGMessageService_Example-acknowledgements.plist */,
+				758642D837BDD98C69199CFB5A04010E /* Pods-MAGMessageService_Example-dummy.m */,
+				A8AA7B604F64C762F207AFA520CE891D /* Pods-MAGMessageService_Example-frameworks.sh */,
+				9FD2E578F1427EA930D372A28E3445D3 /* Pods-MAGMessageService_Example-resources.sh */,
+				B63750CE4A99B2CA1C820432EAB4910D /* Pods-MAGMessageService_Example-umbrella.h */,
+				F4C486470D8DF7BAC7399892FD0E3BE1 /* Pods-MAGMessageService_Example.debug.xcconfig */,
+				15FB0E09C0C5826395539B29C11D4091 /* Pods-MAGMessageService_Example.release.xcconfig */,
+			);
+			name = "Pods-MAGMessageService_Example";
+			path = "Target Support Files/Pods-MAGMessageService_Example";
+			sourceTree = "<group>";
+		};
+		888B4F781E1372B03D0269A2918E530A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81F8530D7E9B73F4AE3351862305E079 /* CFNetwork.framework */,
+				8B4FB972C2197590ABE2C956365E8FEF /* Foundation.framework */,
+				9A1A05D822BBFB2E25D3657B831F260E /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8DC3187DB7279173E5C52E8BE8D2FEB1 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				37E9850CAF51231F87401C9D5963EE39 /* SocketRocket.h */,
+				BD74F82EA2CCB617119AE5011205E40C /* SRWebSocket.h */,
+				0898C057D730CBD238D8673C57F96246 /* SRWebSocket.m */,
+				58568D630B39E76CA642F3332E1A45D5 /* Support Files */,
+			);
+			name = SocketRocket;
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		9E038F27526E18E740086A21CE1BCFFF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				417CAB78EB615A4C3D3924DB89B796E6 /* MAGMessageFrame.h */,
+				8D029F5310A306F173650E78119BF3AC /* MAGMessageFrame.m */,
+				3315452031A1651967573BEA62D91D2F /* MAGMessageService.h */,
+				4FA8614A6B2D48FC6638EEABE5D882CC /* MAGMessageService.m */,
+				53EF95052E936EEFB735325A8BD61179 /* MAGSocketClient.h */,
+				325D7CDA494AFA0AEB93CCA6526B3689 /* MAGSocketClient.m */,
+				AC6C17B23C764602C5390F5F8C430AC3 /* Reachability.h */,
+				C8ACF8057CF9D838A52FFEEF62CB79B4 /* Reachability.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B8DFC81C49FEEE6A912512BCD2448A3B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EAB0AEAFA576B85A9E777175A9CC8F9 /* Pods-MAGMessageService_Example */,
+				147968670E0A1D211ADD31BE39F02952 /* Pods-MAGMessageService_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C1292099B9019A9F3B8D457FD8A62123 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				028ABE2CC49CAB4C93AD95D8F0FE2A08 /* MAGMessageService.framework */,
+				7B4A9B8FA85B4A56EF1306C347B1E272 /* Pods_MAGMessageService_Example.framework */,
+				E532BABF0B4BF29630FA8C3FCED9B035 /* Pods_MAGMessageService_Tests.framework */,
+				604FA89D407FA6395D3D07F98646B7E9 /* SocketRocket.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7DD2935C61F6FD576E358582B975A7F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E93EA9C1FEA1ED0D9422D8AEB1975C2 /* MAGMessageFrame.h in Headers */,
+				CF27212CE789095D5D92D09D84AD8825 /* MAGMessageService-umbrella.h in Headers */,
+				B4A9C45EDAD93E8F34FA9E16BAF604D0 /* MAGMessageService.h in Headers */,
+				C142DD0F3EDAE32069841533F5E91AEF /* MAGSocketClient.h in Headers */,
+				B4F6FA2302037A895C88D63491CE81B8 /* Reachability.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AB7C7030246DF271EE63636FC295A24 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6647C7EA61B00C125565DD70686D75D7 /* Pods-MAGMessageService_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B8D5D2AC4EE3449C2DE798D77FD7251 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C4049468910D8583435FB6D33CC7D1 /* SocketRocket-umbrella.h in Headers */,
+				C87BB40E004EE93C65BBBFA8CE92D9B0 /* SocketRocket.h in Headers */,
+				0C9FEB6D84A17B547C23DD281450A488 /* SRWebSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8AF432AFDA8429928F7F5F873B357A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B20BF5CB457803A12A6932048FF507C /* Pods-MAGMessageService_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B4F852D3E4582038E0697F9FC312D6E /* SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4353A0D2AA92EA97416A1FB47D8A3841 /* Build configuration list for PBXNativeTarget "SocketRocket" */;
+			buildPhases = (
+				3AE1EF335A7CE5767A2F1564CA614E46 /* Sources */,
+				3A60C647035D26F4C57C32756E4C5A36 /* Frameworks */,
+				9B8D5D2AC4EE3449C2DE798D77FD7251 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocketRocket;
+			productName = SocketRocket;
+			productReference = 604FA89D407FA6395D3D07F98646B7E9 /* SocketRocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		43172EB3216B556B4351654BB2CCF9AD /* Pods-MAGMessageService_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A236C3938B5DB41EB8EBFB552A71BA77 /* Build configuration list for PBXNativeTarget "Pods-MAGMessageService_Tests" */;
+			buildPhases = (
+				DED9590209548236D2B39716A131E813 /* Sources */,
+				229461D608651D9A15C5414CD8DAB2C6 /* Frameworks */,
+				9AB7C7030246DF271EE63636FC295A24 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MAGMessageService_Tests";
+			productName = "Pods-MAGMessageService_Tests";
+			productReference = E532BABF0B4BF29630FA8C3FCED9B035 /* Pods_MAGMessageService_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		48A082419BDAE4F27D29712C7BB8DBBD /* MAGMessageService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B9BD5BD36974CB7C937402228E1D286 /* Build configuration list for PBXNativeTarget "MAGMessageService" */;
+			buildPhases = (
+				1037308621A6B657BF00F2814D71062C /* Sources */,
+				290BFA00D0ACC2F0639275095A17A929 /* Frameworks */,
+				7DD2935C61F6FD576E358582B975A7F6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58FDBF30D21849176148FAD63C8FAAB3 /* PBXTargetDependency */,
+			);
+			name = MAGMessageService;
+			productName = MAGMessageService;
+			productReference = 028ABE2CC49CAB4C93AD95D8F0FE2A08 /* MAGMessageService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B1764DABAB8FCECADA138947541747E7 /* Pods-MAGMessageService_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C5C6B602CC6460B862149C05B1B939 /* Build configuration list for PBXNativeTarget "Pods-MAGMessageService_Example" */;
+			buildPhases = (
+				6B84D613D061B4B70BCF0144A3C4F824 /* Sources */,
+				A6C0374CC737D4CAC9273445D689C97C /* Frameworks */,
+				E8AF432AFDA8429928F7F5F873B357A3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA10A3E3FC354E4DEB326DE5DC082551 /* PBXTargetDependency */,
+				D8B5A99A5BAD9AA905497FD8F2BA2114 /* PBXTargetDependency */,
+			);
+			name = "Pods-MAGMessageService_Example";
+			productName = "Pods-MAGMessageService_Example";
+			productReference = 7B4A9B8FA85B4A56EF1306C347B1E272 /* Pods_MAGMessageService_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C1292099B9019A9F3B8D457FD8A62123 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48A082419BDAE4F27D29712C7BB8DBBD /* MAGMessageService */,
+				B1764DABAB8FCECADA138947541747E7 /* Pods-MAGMessageService_Example */,
+				43172EB3216B556B4351654BB2CCF9AD /* Pods-MAGMessageService_Tests */,
+				2B4F852D3E4582038E0697F9FC312D6E /* SocketRocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1037308621A6B657BF00F2814D71062C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCEF6FE2566A18E4CE9F001D9994994 /* MAGMessageFrame.m in Sources */,
+				B88B86969D58925DAF8030439049D609 /* MAGMessageService-dummy.m in Sources */,
+				018265B56FAD326A9720B79278D15002 /* MAGMessageService.m in Sources */,
+				CA9041FC2064DE6AC4CB819E036B992F /* MAGSocketClient.m in Sources */,
+				FB11640FA7DC16DEF8C463D24CC41A68 /* Reachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AE1EF335A7CE5767A2F1564CA614E46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD09FB11C8B7B6D34258FE941AE78EBA /* SocketRocket-dummy.m in Sources */,
+				02AE907A5C3A644B2B5D0345B4A4020E /* SRWebSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B84D613D061B4B70BCF0144A3C4F824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADEC233072CA47751CB31D61D583E573 /* Pods-MAGMessageService_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED9590209548236D2B39716A131E813 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19826533A935A19DF8353302437AF449 /* Pods-MAGMessageService_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58FDBF30D21849176148FAD63C8FAAB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 2B4F852D3E4582038E0697F9FC312D6E /* SocketRocket */;
+			targetProxy = BCAD0655C71129E0D009B61EAA7F5A91 /* PBXContainerItemProxy */;
+		};
+		AA10A3E3FC354E4DEB326DE5DC082551 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MAGMessageService;
+			target = 48A082419BDAE4F27D29712C7BB8DBBD /* MAGMessageService */;
+			targetProxy = D874DFFA98E35C2779CC757BA7C0AF6D /* PBXContainerItemProxy */;
+		};
+		D8B5A99A5BAD9AA905497FD8F2BA2114 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SocketRocket;
+			target = 2B4F852D3E4582038E0697F9FC312D6E /* SocketRocket */;
+			targetProxy = B6182DC19238E2E80F1EAF8F347CE363 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E1EC3E8EA76ACA8AAA2035AE44BAC81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A0C829A068C943BD37C63985D4645D8 /* Pods-MAGMessageService_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGMessageService_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGMessageService_Tests/Pods-MAGMessageService_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGMessageService_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		242482D7334AF0DD68BAE9CC3E535CDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 739EFC4B6B20148B6E367FD9B104399F /* MAGMessageService.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGMessageService/MAGMessageService-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGMessageService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGMessageService/MAGMessageService.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MAGMessageService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		4F72D56C9B778C79727E18E9C72FC224 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15FB0E09C0C5826395539B29C11D4091 /* Pods-MAGMessageService_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGMessageService_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGMessageService_Example/Pods-MAGMessageService_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGMessageService_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9FAEAE73AFD9A63F77518C08FAE7A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBBA7A06AE65C5DE0AA43C22FC89CE5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 739EFC4B6B20148B6E367FD9B104399F /* MAGMessageService.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MAGMessageService/MAGMessageService-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MAGMessageService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MAGMessageService/MAGMessageService.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MAGMessageService;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C10CC93C2774A49AF0BD4F0078CCAC84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4C486470D8DF7BAC7399892FD0E3BE1 /* Pods-MAGMessageService_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGMessageService_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGMessageService_Example/Pods-MAGMessageService_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGMessageService_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3FAB8FBD62E4BD8FE1928B816394199 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD17BCC79687537CFDDDD1094B6BDE7 /* Pods-MAGMessageService_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MAGMessageService_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MAGMessageService_Tests/Pods-MAGMessageService_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MAGMessageService_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3BA990FE2308F91FB213A46CC7B5D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FAFC896148BAC2B2B61C2F118AFF3FB /* SocketRocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SocketRocket/SocketRocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SocketRocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SocketRocket/SocketRocket.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SocketRocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4353A0D2AA92EA97416A1FB47D8A3841 /* Build configuration list for PBXNativeTarget "SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3BA990FE2308F91FB213A46CC7B5D22 /* Debug */,
+				B9FAEAE73AFD9A63F77518C08FAE7A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B9BD5BD36974CB7C937402228E1D286 /* Build configuration list for PBXNativeTarget "MAGMessageService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				242482D7334AF0DD68BAE9CC3E535CDE /* Debug */,
+				BBBA7A06AE65C5DE0AA43C22FC89CE5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A236C3938B5DB41EB8EBFB552A71BA77 /* Build configuration list for PBXNativeTarget "Pods-MAGMessageService_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FAB8FBD62E4BD8FE1928B816394199 /* Debug */,
+				1E1EC3E8EA76ACA8AAA2035AE44BAC81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C5C6B602CC6460B862149C05B1B939 /* Build configuration list for PBXNativeTarget "Pods-MAGMessageService_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C10CC93C2774A49AF0BD4F0078CCAC84 /* Debug */,
+				4F72D56C9B778C79727E18E9C72FC224 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

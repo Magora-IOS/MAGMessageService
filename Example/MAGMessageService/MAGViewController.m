@@ -7,23 +7,71 @@
 //
 
 #import "MAGViewController.h"
+#import <MAGMessageService/MAGMessageService.h>
 
-@interface MAGViewController ()
+@interface MAGViewController () <MAGMessageServiceDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) MAGMessageService *service;
 
 @end
 
 @implementation MAGViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    self.textView.text = @"";
+    
+    self.service = [[MAGMessageService alloc] init];
+    self.service.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - Actions
+
+
+- (IBAction)onConnectButtonTap:(id)sender {
+    [self.service start];
 }
+
+- (IBAction)onSendMessageTap:(id)sender {
+    
+    NSDictionary *message = @{
+                              @"data": @{ @"body": @"text" },
+                              @"topicId": @"testid"
+                              };
+    [self.service sendMessage:message];
+}
+
+- (IBAction)onDisconectButtonTap:(id)sender {
+    [self.service stop];
+}
+
+
+#pragma mark - <MAGMessageServiceDelegate>
+
+
+- (void)messageService:(MAGMessageService *)service connectingHandler:(MAGMessageServiceConnectingHandler)handler {
+    if (handler != nil) {
+        NSURL *url = [NSURL URLWithString:@"ws://127.0.0.1:8000"];
+        NSString *token = [[NSUUID UUID] UUIDString];
+        handler(url, token);
+    }
+}
+
+- (void)messageService:(MAGMessageService *)service receivedMessage:(NSDictionary *)message {
+    NSLog(@"RR << %@", message);
+    
+    NSMutableString *text = [[NSMutableString alloc] initWithString:self.textView.text];
+    
+    [text appendString:@">>> MESSAGE\n"];
+    [text appendString:message.description];
+    [text appendString:@"\n"];
+    
+    self.textView.text = text;
+}
+
+
 
 @end

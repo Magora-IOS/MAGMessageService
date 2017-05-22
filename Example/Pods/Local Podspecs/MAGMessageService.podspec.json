@@ -1,0 +1,27 @@
+{
+  "name": "MAGMessageService",
+  "version": "0.1.0",
+  "summary": "A short description of MAGMessageService.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/magora-ap/MAGMessageService",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "magora-ap": "zykov@magora.systems"
+  },
+  "source": {
+    "git": "https://github.com/magora-ap/MAGMessageService.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MAGMessageService/Classes/**/*",
+  "dependencies": {
+    "SocketRocket": [
+      "~> 0.5.1"
+    ]
+  }
+}

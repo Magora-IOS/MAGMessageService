@@ -1,0 +1,19 @@
+PODS:
+  - MAGMessageService (0.1.0):
+    - SocketRocket (~> 0.5.1)
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - MAGMessageService (from `../`)
+
+EXTERNAL SOURCES:
+  MAGMessageService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MAGMessageService: 6dffad6c966cdb76176b6a0315694d0dfb849511
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: 9d1c3d022399a655336808f744e0961e24243b27
+
+COCOAPODS: 1.2.1
