@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MAGMessageService'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Service for chat.'
   s.description      = <<-DESC
 Service for chat.
