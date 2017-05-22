@@ -16,6 +16,8 @@
 @property (nonatomic, assign) NSInteger reopenCounter;
 @property (nonatomic, strong) Reachability *hostReachability;
 @property (nonatomic, assign) NetworkStatus currentStatus;
+@property (nonatomic, assign) BOOL isRun;
+
 @end
 
 @implementation MAGMessageService
@@ -27,6 +29,7 @@
         _socket.delegate = self;
         _reopenCounter = 1;
         _currentStatus = NotReachable;
+        _isRun = NO;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(didEnterBackground)
                                                      name:UIApplicationDidEnterBackgroundNotification
@@ -49,31 +52,32 @@
 }
 
 - (void)start {
-    
-    __weak typeof(self) wSelf =  self;
-    [self.delegate messageService:self connectingHandler:^(NSURL *url, NSString *token) {
-        [wSelf.socket connectWithUrl:url token:token];
-    }];
+    self.isRun = YES;
+    [self _start];
 }
 
 - (void)stop {
-    [self.socket disconnect];
-    self.reopenCounter = 1;
+    self.isRun = NO;
+    [self.hostReachability stopNotifier];
+    [self _stop];
 }
 
 - (void)sendMessage:(NSDictionary *)message {
     [self.socket sendMessage:message];
 }
 
+
 #pragma mark - Privater
 
 
 - (void)didEnterBackground {
-    [self stop];
+    [self _stop];
 }
 
 - (void)willEnterForeground {
-    [self start];
+    if (self.isRun == YES) {
+        [self _start];
+    }
 }
 
 - (void)dealloc {
@@ -85,22 +89,33 @@
     NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
     
     NetworkStatus status = [curReach currentReachabilityStatus];
-    if (self.currentStatus == status) {
+    if (self.currentStatus == status || self.isRun == NO) {
         return;
     }
     
     self.currentStatus = status;
     switch (status) {
         case NotReachable:
-            [self stop];
+            [self _stop];
             break;
         case ReachableViaWWAN:
         case ReachableViaWiFi:
-            [self start];
+            [self _start];
             break;
     }
 }
 
+- (void)_start {
+    __weak typeof(self) wSelf =  self;
+    [self.delegate messageService:self connectingHandler:^(NSURL *url, NSString *token) {
+        [wSelf.socket connectWithUrl:url token:token];
+    }];
+}
+
+- (void)_stop {
+    [self.socket disconnect];
+    self.reopenCounter = 1;
+}
 
 #pragma mark - <MAGSocketClientDelegate>
 
@@ -111,7 +126,7 @@
 
 - (void)didCloseSocketClient:(MAGSocketClient *)client {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(self.reopenCounter * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self start];
+        [self _start];
     });
     self.reopenCounter *= 2;
 }
