@@ -16,6 +16,7 @@ typedef void(^MAGMessageServiceConnectingHandler)(NSURL *url, NSString *token);
 
 - (void)messageService:(MAGMessageService *)service connectingHandler:(MAGMessageServiceConnectingHandler)handler;
 - (void)messageService:(MAGMessageService *)service receivedMessage:(NSDictionary *)message;
+- (void)messageService:(MAGMessageService *)service receivedError:(NSError *)error;
 
 @end
 

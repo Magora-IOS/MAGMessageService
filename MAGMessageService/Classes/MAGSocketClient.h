@@ -10,6 +10,17 @@
 
 @class MAGSocketClient;
 
+
+extern NSString * const MAGSocketClientErrorDomian;
+
+typedef enum MAGErrorCode : NSInteger {
+
+    MAGErrorCodeUnknownCommand = 1001,
+    MAGErrorCodeErrorCommand = 1002,
+    MAGErrorCodeCantSerialize = 1003
+    
+} MAGErrorCode;
+
 @protocol MAGSocketClientDelegate <NSObject>
 
 - (void)didOpenSocketClient:(MAGSocketClient *)client;

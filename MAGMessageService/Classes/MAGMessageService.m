@@ -137,7 +137,7 @@
 }
 
 - (void)socketClient:(MAGSocketClient *)client receivedError:(NSError *)error {
-    
+    [self.delegate messageService:self receivedError:error];
 }
 
 @end

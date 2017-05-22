@@ -17,6 +17,8 @@
 #define	kCommandMessage @"MESSAGE"
 #define	kCommandError @"ERROR"
 
+NSString * const MAGSocketClientErrorDomian = @"com.magsocketclient.error";
+
 @interface MAGSocketClient() <SRWebSocketDelegate>
 
 @property (nonatomic, retain) SRWebSocket *socket;
@@ -69,8 +71,8 @@ CFAbsoluteTime serverActivity;
     if (data != nil) {
         [self.socket send:data];
     } else {
-        //TODO: Create error: Cant serialize message
-        [self.delegate socketClient:self receivedError:nil];
+        NSError *error = [NSError errorWithDomain:MAGSocketClientErrorDomian code:MAGErrorCodeCantSerialize userInfo:nil];
+        [self.delegate socketClient:self receivedError:error];
     }
 }
 
@@ -142,12 +144,12 @@ CFAbsoluteTime serverActivity;
         [self.delegate socketClient:self receivedMessage:frame.payload];
     } else if ([frame.command isEqualToString:kCommandError]){
         NSLog(@">>> ERROR");
-        //TODO: Create error
-        [self.delegate socketClient:self receivedError:nil];
+        NSError *error = [NSError errorWithDomain:MAGSocketClientErrorDomian code:MAGErrorCodeErrorCommand userInfo:nil];
+        [self.delegate socketClient:self receivedError:error];
     } else {
         NSLog(@">>> UNKNOWN_COMMAND");
-        //TODO: Create error
-        [self.delegate socketClient:self receivedError:nil];
+        NSError *error = [NSError errorWithDomain:MAGSocketClientErrorDomian code:MAGErrorCodeUnknownCommand userInfo:nil];
+        [self.delegate socketClient:self receivedError:error];
     }
 }
     

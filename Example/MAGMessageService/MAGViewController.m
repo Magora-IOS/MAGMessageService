@@ -72,6 +72,9 @@
     self.textView.text = text;
 }
 
+- (void)messageService:(MAGMessageService *)service receivedError:(NSError *)error {
+    
+}
 
 
 @end
