@@ -8,6 +8,9 @@
 
 #import "MAGMessageFrame.h"
 
+const NSString *kCommandKey = @"command";
+const NSString *kPayloadKey = @"payload";
+
 @interface MAGMessageFrame()
     
 @property (nonatomic, copy) NSString *command;
@@ -24,8 +27,8 @@
     NSData *data = [message dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     
-    frame.command = json[@"name"];
-    frame.payload = json[@"payload"];
+    frame.command = json[kCommandKey];
+    frame.payload = json[kPayloadKey];
     
     return frame;
 }
@@ -44,8 +47,8 @@
     NSError *localError = nil;
     NSDictionary *message =
     @{
-      @"name" : self.command,
-      @"payload" : self.payload
+      kCommandKey : self.command,
+      kPayloadKey : self.payload
       };
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:message options:NSJSONWritingPrettyPrinted error:&localError];
@@ -58,8 +61,8 @@
 
 - (NSString *)description {
     NSDictionary *message = @{
-        @"name" : self.command,
-        @"payload" : self.payload
+        kCommandKey : self.command,
+        kPayloadKey : self.payload
     };
     return message.description;
 }
